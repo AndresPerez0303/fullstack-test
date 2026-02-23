@@ -1,0 +1,15 @@
+/app_spring/.gradle/
+/app_spring/build/
+/app_spring/.idea/
+/app_spring/.vscode/
+
+/app_react/node_modules/
+/app_react/build/
+/app_react/.idea/
+/app_react/.vscode/
+/app_react/.env
+/app_react/.yarn
+
+/.idea/
+/.vscode/
+/build/
