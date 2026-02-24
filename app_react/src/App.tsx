@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
+// TODO: Importar componentes ProductList y ProductForm cuando estén creados
+// import ProductList from './components/ProductList'
+// import ProductForm from './components/ProductForm'
+
 function App() {
-  const [count, setCount] = useState(0)
+  // TODO: Agregar estado para manejar la lista de productos
+  // const [products, setProducts] = useState([])
+
+  // TODO: Agregar función para refrescar productos después de crear o eliminar
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app-container">
+      <header>
+        <h1>Sistema de Gestión de Productos</h1>
+        <p>Prueba Técnica Full Stack</p>
+      </header>
+
+      <main>
+        {/* TODO: Agregar ProductForm aquí */}
+        <div className="form-section">
+          <h2>Agregar Nuevo Producto</h2>
+          {/* <ProductForm onProductAdded={handleProductAdded} /> */}
+        </div>
+
+        {/* TODO: Agregar ProductList aquí */}
+        <div className="list-section">
+          <h2>Lista de Productos</h2>
+          {/* <ProductList products={products} onProductDeleted={handleProductDeleted} /> */}
+        </div>
+      </main>
+    </div>
   )
 }
 
 export default App
+
+
+
