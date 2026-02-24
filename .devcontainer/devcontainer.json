@@ -6,5 +6,15 @@
       "version": "20"
     }
   },
-  "forwardPorts": [8080, 3000]
+  "forwardPorts": [8080, 3000],
+  "postCreateCommand": "cd /workspaces/prueba_tecnica/app_react && yarn install && cd /workspaces/prueba_tecnica/app_spring && ./gradlew build",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "vscjava.extension-pack-for-java"
+      ]
+    }
+  }
 }
