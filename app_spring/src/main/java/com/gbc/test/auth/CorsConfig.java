@@ -18,26 +18,11 @@ public class CorsConfig implements WebMvcConfigurer {
 
   @Override
   public void addCorsMappings(CorsRegistry registry) {
+    boolean allowCredentials = false;
     registry.addMapping("/**")
             .allowedOrigins("*")
-            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH", "HEAD")
+            .allowedMethods("*")
             .allowedHeaders("*")
-            .allowCredentials(false)
-            .maxAge(3600);
-  }
-
-  @Bean
-  public CorsFilter corsFilter() {
-    CorsConfiguration config = new CorsConfiguration();
-    config.setAllowedOrigins(List.of("*"));
-    config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH", "HEAD"));
-    config.setAllowedHeaders(List.of("*"));
-    config.setAllowCredentials(false);
-    config.setMaxAge(3600L);
-
-    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-    source.registerCorsConfiguration("/**", config);
-
-    return new CorsFilter(source);
+            .allowCredentials(allowCredentials);
   }
 }
