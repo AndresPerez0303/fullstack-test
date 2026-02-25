@@ -1,7 +1,14 @@
 spring:
   application:
     name: test
+  web:
+    resources:
+      add-mappings: true
 
 server:
   port: 8080
+  forward-headers-strategy: framework
+  error:
+    include-message: always
+    include-binding-errors: always
 
